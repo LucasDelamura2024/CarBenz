@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARBENZ - Serviço Premium</title>
+    <link rel="stylesheet" href="carrosel.scss">
+    <!-- Estilos e Fontes -->
+    <link rel="icon" type="image/png" href="/img/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+<header class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        
+        <!-- Logo e Nome da Marca -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="/img/logo-removebg.png" alt="Logo CarBenz" style="height: 110px; width: auto; margin-right: 8px;">
+            <h1 style="margin-top: 15px;">CARBENZ</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a href="/serviços.html" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="#booking" class="nav-link">Agendar</a></li>
+                <li class="nav-item"><a href="#about-contact" class="nav-link">Sobre Nós</a></li>
+                <li class="nav-item"><a href="#contatos" class="nav-link">Contatos</a></li>
+                <li class="nav-item"><a href="/cadastro.html" class="nav-link">Cadastro</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+        <!-- Mensagem de Cadastro 
+    <div id="signup-message" class="signup-message">
+        <div class="signup-content">
+            <button id="close-message" class="close-button">&times;</button>
+            <h2>Cadastre-se e Garanta Descontos Exclusivos!</h2>
+            <p>Não perca a oportunidade de receber ofertas especiais e promoções.</p>
+            <a href="/cadastro.html" class="btn btn-custom">Ir para Cadastro</a>
+        </div>
+    </div> -->
+
+    <!-- Hero Section -->
+    <section class="hero text-center text-light" style="background-image: url('/img/background.webp'); background-size: cover; background-position: center;">
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="bg-dark bg-opacity-50  rounded" id="transp-BK" style="padding-bottom: 20px; border-radius: 12px; padding-top: 26px;">
+                <h1 class="display-4">Serviço Premium para Mercedes</h1>
+                <p class="lead">Seu carro merece o melhor tratamento.</p>
+                <a href="#booking" class="btn btn-custom btn-lg rounded">Agendar Serviço</a>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+  <!-- Seção de Serviços -->
+<div class="container reveal9">
+    <section id="services" class="services-section text-center">
+        <div class="container custom-container">
+            <h2 class="mb-4">Nossos Serviços</h2>
+            <div class="row g-3">
+                <!-- Card 1: Diagnóstico -->
+                <div class="col-md-4 service-card bg-light p-3 container reveal" style="color: #42729c;">
+                    <img src="/img/serv 1.webp" class="img-fluid mb-3 rounded" alt="Serviço de Diagnóstico">
+                    <h4><i class="fas fa-search"></i> Diagnóstico</h4>
+                    <p style="color: #343a40;">Serviço completo de diagnóstico com ferramentas avançadas.</p>
+                    <p class="price" style="font-size: 1.5em; font-weight: bold; color: #d9534f; transition: color 0.3s ease;">R$ 1.400,00</p>
+                    <a href="https://www.mercadopago.com.br/api/[sua_api_1]" class="btn btn-custom rounded" target="_blank" style="background-color: #42729c; color: #fff; font-weight: bold; transition: background-color 0.3s ease, transform 0.3s ease;">Agendar agora</a>
+                </div>
+                <br>
+                <!-- Card 2: Troca de Óleo -->
+                <div class="col-md-4 service-card bg-light p-3 container reveal" style="color: #42729c;">
+                    <img src="/img/oleo serv.webp" class="img-fluid mb-3 rounded" alt="Serviço de Troca de Óleo">
+                    <h4><i class="fas fa-oil-can"></i> Troca de Óleo</h4>
+                    <p style="color: #343a40;">Troca de óleo premium para manter o desempenho ideal do motor.</p>
+                    <p class="price" style="font-size: 1.5em; font-weight: bold; color: #d9534f; transition: color 0.3s ease;">R$ 890,00</p>
+                    <a href="https://www.mercadopago.com.br/api/[sua_api_2]" class="btn btn-custom rounded" target="_blank" style="background-color: #42729c; color: #fff; font-weight: bold; transition: background-color 0.3s ease, transform 0.3s ease;">Agendar agora</a>
+                </div>
+                <br>
+                <!-- Card 3: Troca de Óleo e Filtro de Câmbio -->
+                <div class="col-md-4 service-card bg-light p-3 container reveal" style="color: #42729c;">
+                    <img src="/img/oleo e filtro.webp" class="img-fluid mb-3 rounded" alt="Serviço de Troca de Óleo e Filtro de Câmbio">
+                    <h4><i class="fas fa-filter"></i> Troca de Óleo e Filtro de Câmbio</h4>
+                    <p style="color: #343a40;">Serviço de troca de óleo e filtro de câmbio para máxima performance.</p>
+                    <p class="price" style="font-size: 1.5em; font-weight: bold; color: #d9534f; transition: color 0.3s ease;">R$ 2.390,00</p>
+                    <a href="https://www.mercadopago.com.br/api/[sua_api_3]" class="btn btn-custom rounded" target="_blank" style="background-color: #42729c; color: #fff; font-weight: bold; transition: background-color 0.3s ease, transform 0.3s ease;">Agendar agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+    
+    
+    
+ <!-- Booking Section -->
+<div class="container reveal">
+        <section id="booking" class="bg-light">
+            <div class="container">
+                <h2 class="mb-4 text-center">Escolha uma Opção</h2>
+                <div class="button-container">
+                    <button id="show-booking" class="btn btn-secondary mb-3">Agendar Serviço</button>
+                    <button id="show-quote" class="btn btn-secondary mb-3">Orçamento</button>
+                </div>
+            </div>
+
+                <!-- Formulários para Agendamento e Orçamento -->
+                <form id="booking-form" class="text-center" onsubmit="redirectToSignalPage(event)">
+                    <h3 class="mb-4">Agendar Serviço</h3>
+                
+                <div class="form-group mb-3">
+                    <div class="d-flex justify-content-start align-items-center mb-1">
+                        <i class="fas fa-cogs me-2" style="color: #42729c;"></i>
+                        <label for="service-type" class="mb-0">Selecione o tipo de serviço</label>
+                    </div>
+                    <select id="service-type" name="service-type" class="form-select" required style="border-radius: 25px;">
+                        <option value="">Selecione...</option>
+                        <option value="manutencao">Manutenção</option>
+                        <option value="reparos">Reparos</option>
+                        <option value="diagnosticos">Diagnósticos</option>
+                    </select>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="d-flex justify-content-start align-items-center mb-1">
+                        <i class="fas fa-calendar-alt me-2" style="color: #42729c;"></i>
+                        <label for="date" class="mb-0">Data de Agendamento</label>
+                    </div>
+                    <input type="date" id="date" name="date" class="form-control" required style="border-radius: 25px">
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="d-flex justify-content-start align-items-center mb-1">
+                        <i class="fas fa-clock me-2" style="color: #42729c;"></i>
+                        <label for="time" class="mb-0">Hora de Agendamento</label>
+                    </div>
+                    <input type="time" id="time" name="time" class="form-control" required style="border-radius: 25px">
+                </div>
+
+                <!-- Novos Inputs Adicionados -->
+                <div class="form-group mb-3">
+                    <div class="d-flex justify-content-start align-items-center mb-1">
+                        <i class="fas fa-user me-2" style="color: #42729c;"></i>
+                        <label for="client-name" class="mb-0">Nome</label>
+                    </div>
+                    <input type="text" id="client-name" name="client-name" class="form-control" placeholder="Nome" required style="border-radius: 25px">
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="d-flex justify-content-start align-items-center mb-1">
+                        <i class="fas fa-phone me-2" style="color: #42729c;"></i>
+                        <label for="client-phone" class="mb-0">Telefone</label>
+                    </div>
+                    <input type="tel" id="client-phone" name="client-phone" class="form-control" placeholder="Telefone" required style="border-radius: 25px">
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="d-flex justify-content-start align-items-center mb-1">
+                        <i class="fas fa-map-marker-alt me-2" style="color: #42729c;"></i>
+                        <label for="client-cep" class="mb-0">CEP</label>
+                    </div>
+                    <input type="text" id="client-cep" name="client-cep" class="form-control" placeholder="CEP" required style="border-radius: 25px">
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="d-flex justify-content-start align-items-center mb-1">
+                        <i class="fas fa-envelope me-2" style="color: #42729c;"></i>
+                        <label for="client-email" class="mb-0">E-mail</label>
+                    </div>
+                    <input type="email" id="client-email" name="client-email" class="form-control" placeholder="E-mail" required style="border-radius: 25px">
+                </div>
+
+                <button type="submit" class="btn btn-secondary" style="background-color: #42729c; border-radius: 25px;">Agendar</button>
+            </form>
+
+            <form id="quote-form" class="text-center" style="display: none;" onsubmit="handleQuoteSubmission(event)">
+                    <h3 class="mb-4">Orçamento</h3>
+                    <div class="form-group mb-3">
+                        <div class="d-flex justify-content-start align-items-center mb-1">
+                            <i class="fas fa-user me-2" style="color: #42729c;"></i>
+                            <label for="name" class="mb-0">Nome Completo</label>
+                        </div>
+                        <input type="text" id="name" name="nome" class="form-control" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="d-flex justify-content-start align-items-center mb-1">
+                            <i class="fas fa-phone me-2" style="color: #42729c;"></i>
+                            <label for="phone" class="mb-0">Telefone</label>
+                        </div>
+                        <input type="tel" id="phone" name="telefone" class="form-control" required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <div class="d-flex justify-content-start align-items-center mb-1">
+                            <i class="fas fa-envelope me-2" style="color: #42729c;"></i>
+                            <label for="email" class="mb-0">E-mail</label>
+                        </div>
+                        <input type="email" id="email" name="email" class="form-control" required placeholder="Digite seu e-mail">
+                    </div>
+                    
+
+                    <div class="form-group mb-3 d-none">
+                        <input type="date" id="quote-date" name="quote-date" name="data" readonly>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="d-flex justify-content-start align-items-center mb-1">
+                            <i class="fas fa-car me-2" style="color: #42729c;"></i>
+                            <label for="category" class="mb-0">Categoria</label>
+                        </div>
+                        <select id="category" name="categoria" class="form-select" required onchange="updateModels()">
+                            <option value="">Selecione uma Categoria...</option>
+                            <option value="sedans">Sedãs</option>
+                            <option value="suvs">SUVs e Crossovers</option>
+                            <option value="coupes">Coupés</option>
+                            <option value="conversiveis">Conversíveis</option>
+                            <option value="sportivos">Sportivos</option>
+                            <option value="hibridos">Híbridos e Elétricos</option>
+                            <option value="vans">Vans</option>
+                            <option value="especiais">Modelos Especiais</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="d-flex justify-content-start align-items-center mb-1">
+                            <i class="fas fa-car me-2" style="color: #42729c;"></i>
+                            <label for="vehicle-model" class="mb-0">Modelo do Veículo</label>
+                        </div>
+                        <select id="vehicle-model" name="modelo" class="form-select" required>
+                            <option value="">Selecione um Modelo...</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="d-flex justify-content-start align-items-center mb-1">
+                            <i class="fas fa-tools me-2" style="color: #42729c;"></i>
+                            <label for="quote-service-type" class="mb-0">Tipo de Serviço</label>
+                        </div>
+                        <select id="quote-service-type" name="tipo_serviço" class="form-select" required>
+                            <option value="" >Selecione...</option>
+                            <option value="troca-de-oleo">Troca de Óleo</option>
+                            <option value="balanceamento">Balanceamento</option>
+                            <option value="alinhamento">Alinhamento</option>
+                            <option value="inspecao">Inspeção Completa</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="d-flex justify-content-start align-items-center mb-1">
+                            <i class="fas fa-comments me-2" style="color: #42729c;"></i>
+                            <label for="details" name="detalhes" class="mb-0">Detalhes</label>
+                        </div>
+                        <textarea id="details" name="detalhes" class="form-control" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-secondary" style="background-color: #42729c; border-radius: 25px;">Agendar</button>
+                </form>
+            </div>
+        </section>
+</div>
+
+
+
+<script>
+    function redirectToSignalPage(event) {
+        event.preventDefault();
+        
+        // Coleta os dados do formulário
+        const serviceType = document.getElementById('service-type').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+        const clientName = document.getElementById('client-name').value;
+        const clientPhone = document.getElementById('client-phone').value;
+        const clientCep = document.getElementById('client-cep').value;
+        const clientEmail = document.getElementById('client-email').value;
+
+        // Armazena os dados no localStorage
+        localStorage.setItem("serviceType", serviceType);
+        localStorage.setItem("date", date);
+        localStorage.setItem("time", time);
+        localStorage.setItem("clientName", clientName);
+        localStorage.setItem("clientPhone", clientPhone);
+        localStorage.setItem("clientCep", clientCep);
+        localStorage.setItem("clientEmail", clientEmail);
+
+        // Redireciona para a página de confirmação do sinal
+        window.location.href = "sinal.html";
+    }
+</script>
+
+    <!-- Círculo de Loading -->
+    <div id="loading-circle" class="d-none text-center">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden"></span>
+        </div>
+    </div>
+
+        
+    <!-- Mensagem de Sucesso -->
+    <div id="success-message" class="alert alert-success d-none text-center" role="alert">
+        Cadastro efetuado com sucesso!
+    </div>
+</div>
+
+    <!-- Seção Carrossel Personalizado 
+    
+    <div class="wrapper">
+    <section id="section1">
+        <a href="#section3" class="arrow__btn">‹</a>
+        <div class="item">
+        <img src="/img/Trabalhos/2022-03-29.png" alt="Describe Image">
+      </div>
+        <div class="item">
+        <img src="/img/Trabalhos/2023-04-04.png" alt="Describe Image">
+      </div>
+        <div class="item">
+        <img src="/img/Trabalhos/2023-05-31 (1).png" alt="Describe Image">
+      </div>
+        <div class="item">
+        <img src="/img/Trabalhos/2023-05-31 (4).png" alt="Describe Image">
+      </div>
+        <div class="item">
+        <img src="/img/Trabalhos/2023-05-31 (2).png" alt="Describe Image">
+      </div>
+        <a href="#section2" class="arrow__btn">›</a>
+      </section>
+      <section id="section2">
+        <a href="#section1" class="arrow__btn">‹</a>
+        <div class="item">
+            <img src="/img/Trabalhos/2023-05-31.png" alt="Describe Image">
+          </div>
+            <div class="item">
+            <img src="/img/Trabalhos/2023-04-04.png" alt="Describe Image">
+          </div>
+            <div class="item">
+            <img src="/img/Trabalhos/2023-05-31 (1).png" alt="Describe Image">
+          </div>
+            <div class="item">
+            <img src="/img/Trabalhos/2023-05-31 (4).png" alt="Describe Image">
+          </div>
+            <div class="item">
+            <img src="/img/Trabalhos/2023-05-31 (2).png" alt="Describe Image">
+          </div>
+        <a href="#section3" class="arrow__btn">›</a>
+      </section>
+      <section id="section3">
+        <a href="#section2" class="arrow__btn">‹</a>
+        <div class="item">
+            <img src="/img/Trabalhos/2023-05-31 (4).png alt="Describe Image">
+          </div>
+            <div class="item">
+            <img src="/img/Trabalhos/2023-04-04.png" alt="Describe Image">
+          </div>
+            <div class="item">
+            <img src="/img/Trabalhos/2023-05-31 (1).png" alt="Describe Image">
+          </div>
+            <div class="item">
+            <img src="/img/Trabalhos/2023-05-31 (4).png" alt="Describe Image">
+          </div>
+            <div class="item">
+            <img src="/img/Trabalhos/2023-05-31 (2).png" alt="Describe Image">
+          </div>
+        <a href="#section1" class="arrow__btn">›</a>
+      </section>
+    </div> -->
+
+    <div class="container reveal">
+        <div class="container contatos">
+            <section id="about-contact">
+                <div class="shadow-box service-card p-3" style="border-radius: 10px;">
+                    <h2 class="mb-4">Quem Somos</h2>
+                    
+                    <!-- Contêiner para o texto e botão -->
+                    <div id="about-content">
+                        <p id="about-text-preview">
+                            Na CARBENZ, somos apaixonados por veículos Mercedes e dedicados a oferecer serviços de alta qualidade que superem as expectativas dos nossos clientes. Com uma equipe de especialistas altamente treinados...
+                        </p>
+                        <p id="about-text-full" style="display: none;">
+                            Na CARBENZ, somos apaixonados por veículos Mercedes e dedicados a oferecer serviços de alta qualidade que superem as expectativas dos nossos clientes. Com uma equipe de especialistas altamente treinados e experientes, nossa missão é garantir que cada veículo receba um atendimento premium, desde a manutenção rotineira até os serviços mais complexos.
+                            <br><br>
+                            Acreditamos que cada carro conta uma história, e estamos aqui para preservá-la. Utilizamos apenas as melhores práticas e tecnologias de ponta para garantir que seu veículo esteja sempre em perfeitas condições. Nossa abordagem personalizada assegura que cada cliente se sinta valorizado e bem atendido, porque entendemos que a satisfação do cliente é o coração do nosso negócio.
+                            <br><br>
+                            Na CARBENZ, você não está apenas escolhendo um serviço; está investindo na longevidade e desempenho do seu Mercedes. Venha nos visitar e descubra como podemos transformar sua experiência automotiva em algo verdadeiramente excepcional!
+                        </p>
+                    </div>
+    
+                    <!-- Botão "Leia Mais" abaixo do texto -->
+                    <button id="expand-about" class="btn btn-primary mt-3" onclick="toggleAboutText()">Leia Mais</button>
+                </div>
+                <br>
+                <div class="">
+                    <div class="shadow-box p-3">
+                        <h2 class="mb-4">Contatos</h2>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-phone"></i> Telefone: (11) 95198-5714</li>
+                            <li><i class="fas fa-envelope"></i> Email: contato@carberz.com</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Endereço: Rua Rio Novo, 272 - Jardim São Paulo, Guarulhos</li>
+                        </ul>
+                        <!-- Mapa -->
+                        <div class="mt-4">
+                            <h3>Localização</h3>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.455209686836!2d-46.53068442427963!3d-23.46297186051678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce07e29246fdd5%3A0xf077c787b871e5e1!2sRua%20Paquita%20Vilela%2C%20809%20-%20Jardim%20Presidente%2C%20Guarulhos%20-%20SP%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1698262386446!5m2!1spt-BR!2sus" width="100%" height="100px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    
+
+     <!-- Seção Depoimentos -->
+    <div class="container reveal">
+        <section id="testimonials" class=" bg-light">
+            <div class="container">
+                <h2 class="mb-4 text-center">Depoimentos</h2>
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active text-center">
+                            <div class="shadow-box">
+                                <img src="/img/comments/h1.jpg" alt="João Silva" class="rounded-circle mb-3" width="100" height="100" style="margin-top: 30px;">
+                                <p>"Serviço excelente! Meu carro nunca esteve tão bem cuidado. Recomendo a todos!"</p>
+                                <h5>- João Silva</h5>
+                                <small>Mercedes-Benz C-Class</small>
+                                <div class="my-2">
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <div class="shadow-box">
+                                <img src="/img/comments/m1.jpg" alt="Maria Oliveira" class="rounded-circle mb-3" width="100" height="100" style="margin-top: 30px;"">
+                                <p>"A equipe da CARBENZ é super atenciosa e competente. Senti que meu carro estava em boas mãos."</p>
+                                <h5>- Maria Oliveira</h5>
+                                <small>Mercedes-Benz E-Class</small>
+                                <div class="my-2">
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9734;</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <div class="shadow-box">
+                                <img src="/img/comments/h2.jpg" alt="Carlos Santos" class="rounded-circle mb-3" width="100" height="100" style="margin-top: 30px;">
+                                <p>"Os serviços são de alta qualidade. Vale cada centavo investido na manutenção do meu carro."</p>
+                                <h5>- Carlos Santos</h5>
+                                <small>Mercedes-Benz GLE</small>
+                                <div class="my-2">
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                    <span class="star">&#9733;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <button id="scrollToTopBtn">
+        &#8679;
+    </button>
+
+<!-- Footer -->
+<footer class="text-light bg-dark text-center w-100 py-4">
+    <div class="container-fluid">
+        <p>&copy; 2024 CarBenz. Todos os direitos reservados.</p>
+        
+        <div class="social-icons">
+            <a href="https://www.facebook.com/rodriguesmecanicaeestetica/" target="_blank" class="social-link">
+                <i class="fab fa-facebook footer-icon" style="color:  #3b5998"></i>
+            </a>
+            <a href="https://www.reclameaqui.com.br/empresa/car-benz/" target="_blank" class="social-link">
+                <i class="fas fa-exclamation-circle footer-icon" style="color:  #ff6f00"></i>
+            </a>
+            <a href="https://www.instagram.com/carbenz/" target="_blank" class="social-link">
+                <i class="fab fa-instagram footer-icon" style="color:  #e4405f";></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5511951985714" target="_blank" class="social-link">
+                <i class="fab fa-whatsapp footer-icon" style="color:  #25d366";></i>
+            </a>
+        </div>
+        <p>Nos siga em nossas redes sociais!</p>
+    </div>
+</footer>
+
+
+ <!-- Menssagem pg
+ <div id="development-message">
+    Página em desenvolvimento por Lucas Delamura
+</div>  -->
+
+
+    <!-- Não esqueça de incluir o JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Adicionando Bootstrap Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="/servico.js"></script>
+
+    <script>
+        function handleQuoteSubmission(event) {
+    event.preventDefault(); // Evita o envio padrão do formulário
+
+    // Coleta os dados do formulário de orçamento
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value; // Novo campo de e-mail
+    const category = document.getElementById('category').value;
+    const vehicleModel = document.getElementById('vehicle-model').value;
+    const serviceType = document.getElementById('quote-service-type').value;
+    const details = document.getElementById('details').value;
+
+    // Verifica se todos os campos obrigatórios estão preenchidos
+    if (!name || !phone || !email || !category || !vehicleModel || !serviceType) {
+        alert("Por favor, preencha todos os campos obrigatórios.");
+        return;
+    }
+
+    // Chama a função para enviar a mensagem pelo WhatsApp
+    sendWhatsAppMessage(event);
+
+    // Chama a função para enviar o e-mail
+    sendQuoteEmail(name, phone, email, category, vehicleModel, serviceType, details);
+}
+
+function sendQuoteEmail(name, phone, email, category, vehicleModel, serviceType, details) {
+    console.log('Enviando e-mail...');
+
+    fetch('http://localhost:3001/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            to: ['contato@carberz.com', email], // Destinatário principal
+            cc: [email], // Adiciona o e-mail do usuário em cópia
+            subject: 'Solicitação de Orçamento',
+            text: `Olá, aqui estão os detalhes da solicitação de orçamento:\n\n
+Nome: ${name}\n
+Telefone: ${phone}\n
+E-mail: ${email}\n
+Categoria: ${category}\n
+Modelo do Veículo: ${vehicleModel}\n
+Tipo de Serviço: ${serviceType}\n
+Detalhes: ${details || 'Nenhum detalhe adicional'}`,
+            html: `<p><strong>Olá,</strong></p>
+                   <p>Aqui estão os detalhes da solicitação de orçamento:</p>
+                   <ul>
+                       <li><strong>Nome:</strong> ${name}</li>
+                       <li><strong>Telefone:</strong> ${phone}</li>
+                       <li><strong>E-mail:</strong> ${email}</li>
+                       <li><strong>Categoria:</strong> ${category}</li>
+                       <li><strong>Modelo do Veículo:</strong> ${vehicleModel}</li>
+                       <li><strong>Tipo de Serviço:</strong> ${serviceType}</li>
+                       <li><strong>Detalhes:</strong> ${details || 'Nenhum detalhe adicional'}</li>
+                   </ul>
+                   <p>Obrigado por escolher a CarBenz!</p>
+                   <footer style="margin-top: 20px; text-align: left;">
+                       <a href="https://imgbb.com/"><img src="https://i.ibb.co/ZGHvGbr/Assinatura-de-email-corporativo-moderno.png" alt="Assinatura-de-email-corporativo-moderno" border="0"></a>
+                       <p style="font-size: 0.9em; color: #777;">A CarBenz está sempre pronta para atendê-lo com excelência!</p>
+                   </footer>`
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('E-mail enviado com sucesso!');
+        } else {
+            alert('Erro ao enviar o e-mail.');
+            console.error('Erro ao enviar e-mail:', response);
+        }
+    })
+    .catch(error => {
+        console.error('Erro ao tentar enviar o e-mail:', error);
+        alert('Erro ao enviar o e-mail.');
+    });
+}
+    </script>
+    
+
+
+    <script>
+          function setDateTime() {
+            const dateInput = document.getElementById('quote-date');
+            const now = new Date();
+
+            // Formata a data e hora para o formato YYYY-MM-DDTHH:MM
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+
+            const formattedDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
+            dateInput.value = formattedDateTime;
+        }
+
+        // Chama a função quando a página carrega
+        window.onload = setDateTime;
+
+
+
+        const models = {
+            sedans: [
+                "Mercedes-Benz Classe A",
+                "Mercedes-Benz Classe B",
+                "Mercedes-Benz Classe C",
+                "Mercedes-Benz Classe E",
+                "Mercedes-Benz Classe S",
+                "Mercedes-Benz Classe CLA",
+                "Mercedes-Benz Classe CLS"
+            ],
+            suvs: [
+                "Mercedes-Benz GLA",
+                "Mercedes-Benz GLB",
+                "Mercedes-Benz GLC",
+                "Mercedes-Benz GLE",
+                "Mercedes-Benz GLS",
+                "Mercedes-Benz G-Class (G-Wagen)"
+            ],
+            coupes: [
+                "Mercedes-Benz Classe C Coupé",
+                "Mercedes-Benz Classe E Coupé",
+                "Mercedes-Benz Classe S Coupé",
+                "Mercedes-Benz CLA Coupé",
+                "Mercedes-Benz AMG GT"
+            ],
+            conversiveis: [
+                "Mercedes-Benz Classe C Cabriolet",
+                "Mercedes-Benz Classe E Cabriolet",
+                "Mercedes-Benz Classe S Cabriolet",
+                "Mercedes-Benz SL"
+            ],
+            sportivos: [
+                "Mercedes-Benz AMG A",
+                "Mercedes-Benz AMG C",
+                "Mercedes-Benz AMG E",
+                "Mercedes-Benz AMG S",
+                "Mercedes-Benz AMG GT"
+            ],
+            hibridos: [
+                "Mercedes-Benz EQA",
+                "Mercedes-Benz EQB",
+                "Mercedes-Benz EQC",
+                "Mercedes-Benz EQS",
+                "Mercedes-Benz EQS SUV"
+            ],
+            vans: [
+                "Mercedes-Benz Vito",
+                "Mercedes-Benz V-Class",
+                "Mercedes-Benz Sprinter"
+            ],
+            especiais: [
+                "Mercedes-Benz Maybach (versões de luxo da Classe S)",
+                "Mercedes-Benz G63 AMG 6x6",
+                "Mercedes-Benz X-Class (pick-up)"
+            ]
+        };
+    
+        function updateModels() {
+            const categorySelect = document.getElementById('category');
+            const modelSelect = document.getElementById('vehicle-model');
+            const selectedCategory = categorySelect.value;
+    
+            // Limpa opções existentes
+            modelSelect.innerHTML = '<option value="">Selecione um Modelo...</option>';
+    
+            // Adiciona novos modelos
+            if (selectedCategory) {
+                models[selectedCategory].forEach(model => {
+                    const option = document.createElement('option');
+                    option.value = model.toLowerCase().replace(/ /g, '-'); // transforma em um formato de valor
+                    option.textContent = model;
+                    modelSelect.appendChild(option);
+                });
+            }
+        }
+    </script>
+    <!-- Função abrir e fechar menu mobile-->
+    <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarNav = document.getElementById('navbarNav');
+
+            // Fecha o menu ao clicar em qualquer link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                        navbarToggler.click();
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
+        // Exibir formulário correto
+        const showBookingBtn = document.getElementById('show-booking');
+        const showQuoteBtn = document.getElementById('show-quote');
+        const bookingForm = document.getElementById('booking-form');
+        const quoteForm = document.getElementById('quote-form');
+
+        showBookingBtn.addEventListener('click', () => {
+            bookingForm.style.display = 'block';
+            quoteForm.style.display = 'none';
+        });
+
+        showQuoteBtn.addEventListener('click', () => {
+            quoteForm.style.display = 'block';
+            bookingForm.style.display = 'none';
+        });
+
+        function sendWhatsAppMessage(event) {
+    event.preventDefault(); // Evita o envio padrão do formulário
+
+    // Coleta os dados do formulário de orçamento
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const category = document.getElementById('category').value;
+    const vehicleModel = document.getElementById('vehicle-model').value;
+    const serviceType = document.getElementById('quote-service-type').value;
+    const details = document.getElementById('details').value;
+
+    // Verifica se todos os campos obrigatórios estão preenchidos
+    if (!name || !phone || !category || !vehicleModel || !serviceType) {
+        alert("Por favor, preencha todos os campos obrigatórios.");
+        return;
+    }
+
+    // Formata a mensagem para o WhatsApp
+    const phoneNumber = '5511951985714';
+    const message = `Olá tudo bem? Vim pelo site: www.carbenz.com.br e gostaria de solicitar um orçamento, segue dados para o orçamento.\n\n*Nome*: ${name}\n*Telefone*: ${phone}\n*Categoria*: ${category}\n*Modelo do Veículo*: ${vehicleModel}\n*Tipo de Serviço*: ${serviceType}\n*Detalhes*: ${details || 'Nenhum detalhe adicional'}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+
+    // Abre o link do WhatsApp com a mensagem predefinida
+    window.open(whatsappUrl, '_blank');
+}
+
+
+    </script>
+
+<script>
+    // Função para revelar os elementos ao rolar a página
+    function revealOnScroll() {
+        const reveals = document.querySelectorAll('.reveal'); // Seleciona todos os elementos com a classe .reveal
+        
+        reveals.forEach(container => {
+            const windowHeight = window.innerHeight;
+            const containerTop = container.getBoundingClientRect().top;
+            const revealPoint = 150; // Ponto onde o elemento deve começar a aparecer
+
+            if (containerTop < windowHeight - revealPoint) {
+                container.classList.add('active'); // Adiciona a classe 'active' quando o container entra na viewport
+            } else {
+                container.classList.remove('active'); // Remove a classe 'active' se o container sair da viewport
+            }
+        });
+    }
+
+    // Função para rolar para o topo
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Rolagem suave ao topo
+        });
+    }
+
+    // Mostrar ou ocultar o botão de rolagem para o topo
+    function toggleScrollToTopButton() {
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        if (window.scrollY > 300) { // Exibe o botão se o scroll for maior que 300px
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    }
+
+    // Adiciona os listeners para o scroll
+    window.addEventListener('scroll', () => {
+        revealOnScroll();
+        toggleScrollToTopButton();
+    });
+
+    // Listener para o botão de voltar ao topo
+    document.getElementById('scrollToTopBtn').addEventListener('click', scrollToTop);
+</script>
+
+<script>
+    // Função para ocultar a mensagem após 3 segundos
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            document.getElementById('development-message').style.display = 'none';
+        }, 3000); // 3000 milissegundos = 3 segundos
+    });
+</script>
+
+<script>
+    function toggleAboutText() {
+        const fullText = document.getElementById("about-text-full");
+        const previewText = document.getElementById("about-text-preview");
+        const button = document.getElementById("expand-about");
+        
+        if (fullText.style.display === "none") {
+            fullText.style.display = "block"; // Mostra o texto completo
+            previewText.style.display = "none"; // Esconde o texto de prévia
+            button.innerText = "Leia Menos"; // Muda o texto do botão
+        } else {
+            fullText.style.display = "none"; // Esconde o texto completo
+            previewText.style.display = "block"; // Mostra o texto de prévia
+            button.innerText = "Leia Mais"; // Muda o texto do botão
+        }
+    }
+</script>
+
+<script>
+    // Mostrar a mensagem de cadastro quando a página carregar
+window.onload = function() {
+    document.getElementById("signup-message").style.display = "flex";
+}
+
+// Ocultar a mensagem ao clicar no botão de fechar
+document.getElementById("close-message").onclick = function() {
+    document.getElementById("signup-message").style.display = "none";
+}
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzH7Aup_FesgfX37G7_l0YK5WNo-FDEj3eBgVgo14SVeCqjJM1BBqZIr7RdLDGjvB-32g/exec';
+const form = document.forms['quote-form'];
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form),
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("Cadastro efetuado com sucesso!");
+            window.location.reload();
+        } else {
+            throw new Error('Erro ao enviar o formulário');
+        }
+    })
+    .catch(error => {
+        console.error('Error!', error.message);
+        alert('Erro ao enviar o formulário. Tente novamente mais tarde.');
+    });
+});
+
+
+</script>
+
+<script>
+    function handleSubmit(event) {
+    event.preventDefault(); // Evita o envio padrão do formulário
+    
+    // Mostrar o círculo de loading
+    document.getElementById("loading-circle").classList.remove("d-none");
+    document.getElementById("success-message").classList.add("d-none");
+    
+    // Simular o envio de dados (por exemplo, usando uma chamada AJAX ou similar)
+    setTimeout(() => {
+        // Ocultar o círculo de loading
+        document.getElementById("loading-circle").classList.add("d-none");
+        
+        // Mostrar a mensagem de sucesso
+        document.getElementById("success-message").classList.remove("d-none");
+    }, 5000); // 5 segundos
+}
+
+</script>
+</body>
+</html>

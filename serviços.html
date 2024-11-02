@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/serviço.css">
+    <link rel="icon" type="image/png" href="/img/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Logo e Nome da Marca -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/img/logo-removebg.png" alt="Logo CarBenz" style="height: 110px; width: auto; margin-right: 8px;">
+                <h1 style="margin-top: 15px;">CARBENZ</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/index.html#booking" class="nav-link">Agendar</a></li> <!-- Atualizado -->
+                    <li class="nav-item"><a href="#about-contact" class="nav-link">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="#contatos" class="nav-link">Contatos</a></li>
+                    <li class="nav-item"><a href="/cadastro.html" class="nav-link">Cadastro</a></li>
+                </ul>
+            </div>            
+        </div>
+    </header>
+
+    <div class="">
+        <section id="services" class="services-section text-center">
+            <div class="custom-container">
+                <h2 class="mb-4">Nossos Serviços</h2>
+                <div class="row g-3">
+                    <div class="col-md-4 service-card">
+                        <img src="/img/serv/iStock-184986939.jpg" class="img-fluid mb-3" alt="Manutenção Preventiva">
+                        <h4><i class="fas fa-tools"></i> Manutenção Preventiva</h4>
+                        <p>Serviços regulares para garantir que seu veículo funcione sem problemas. Inclui troca de óleo, verificação de fluidos e inspeções de segurança.</p>
+                        <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="setServiceName('Manutenção Preventiva')">
+                            <i class="fab fa-whatsapp"></i> Agendar
+                        </a>
+                    </div>
+                    <div class="col-md-4 service-card">
+                        <img src="/img/serv/reparo-parabrisa-710x474.jpg" class="img-fluid mb-3" alt="Reparos de Emergência">
+                        <h4><i class="fas fa-wrench"></i> Reparos de Emergência</h4>
+                        <p>Atendemos situações inesperadas com rapidez e eficiência, oferecendo reparos em problemas mecânicos e elétricos.</p>
+                        <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="setServiceName('Reparos de Emergência')">
+                            <i class="fab fa-whatsapp"></i> Agendar
+                        </a>
+                    </div>
+                    <div class="col-md-4 service-card">
+                        <img src="/img/serv/diagnostico.jpg" class="img-fluid mb-3" alt="Diagnóstico Avançado">
+                        <h4><i class="fas fa-search"></i> Diagnóstico Avançado</h4>
+                        <p>Utilizamos tecnologia de ponta para identificar problemas ocultos no seu veículo, garantindo um serviço preciso e eficaz.</p>
+                        <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="setServiceName('Diagnóstico Avançado')">
+                            <i class="fab fa-whatsapp"></i> Agendar
+                        </a>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-4 service-card">
+                        <img src="/img/serv/th.jpg" class="img-fluid mb-3" alt="Serviço de Pneus">
+                        <h4><i class="fas fa-car-tire"></i> Serviço de Pneus</h4>
+                        <p>Inclui troca de pneus, alinhamento e balanceamento para garantir a segurança e a performance do seu veículo.</p>
+                        <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="setServiceName('Serviço de Pneus')">
+                            <i class="fab fa-whatsapp"></i> Agendar
+                        </a>
+                    </div>
+                    <div class="col-md-4 service-card">
+                        <img src="/img/serv/sistema-de-freio-do-carro.jpg" class="img-fluid mb-3" alt="Serviço de Freios">
+                        <h4><i class="fas fa-bolt"></i> Serviço de Freios</h4>
+                        <p>Revisão e troca de pastilhas, discos e fluídos de freio para garantir a segurança ao dirigir.</p>
+                        <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="setServiceName('Serviço de Freios')">
+                            <i class="fab fa-whatsapp"></i> Agendar
+                        </a>
+                    </div>
+                    <div class="col-md-4 service-card">
+                        <img src="/img/serv/iStock-184986939.jpg" class="img-fluid mb-3" alt="Troca de Óleo">
+                        <h4><i class="fas fa-oil-can"></i> Troca de Óleo</h4>
+                        <p>Realizamos a troca de óleo e filtros, essenciais para o bom funcionamento do motor.</p>
+                        <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="setServiceName('Troca de Óleo')">
+                            <i class="fab fa-whatsapp"></i> Agendar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Modal para Agendamento -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingModalLabel">Agendar Serviço</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="bookingForm">
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Nome Completo</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Endereço</label>
+                            <input type="text" class="form-control" id="address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="vehicleModel" class="form-label">Modelo do Veículo</label>
+                            <input type="text" class="form-control" id="vehicleModel" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="additionalNotes" class="form-label">Observações Adicionais</label>
+                            <textarea class="form-control" id="additionalNotes"></textarea>
+                        </div>
+                        <input type="hidden" id="serviceName">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    function setServiceName(service) {
+        document.getElementById('serviceName').value = service;
+    }
+    
+    document.getElementById('bookingForm').onsubmit = function(event) {
+        event.preventDefault();
+        
+        const fullName = document.getElementById('fullName').value;
+        const address = document.getElementById('address').value;
+        const vehicleModel = document.getElementById('vehicleModel').value;
+        const additionalNotes = document.getElementById('additionalNotes').value;
+        const serviceName = document.getElementById('serviceName').value;
+        const dateTime = new Date().toLocaleString();
+    
+        const message = `Olá, gostaria de agendar um(a) ${serviceName}.\n` +
+                        `Nome Completo: ${fullName}\n` +
+                        `Endereço: ${address}\n` +
+                        `Modelo do Veículo: ${vehicleModel}\n` +
+                        `Data e Hora: ${dateTime}\n` +
+                        `Observações: ${additionalNotes}`;
+    
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=5511951985714&text=${encodeURIComponent(message)}`;
+        
+        // Abrir o WhatsApp
+        window.open(whatsappUrl, '_blank');
+    
+        // Fechar o modal
+        var modal = bootstrap.Modal.getInstance(document.getElementById('bookingModal'));
+        modal.hide();
+    
+        // Limpar o formulário
+        document.getElementById('bookingForm').reset();
+    };
+    </script>
+    
+    
+    
+         
+    <div class="container reveal">
+        <div class="container contatos">
+            <section id="about-contact">
+                <div class="shadow-box service-card">
+                    <h2 class="mb-4">Quem Somos</h2>
+                    <p id="about-text-preview">
+                        Na CARBENZ, somos apaixonados por veículos Mercedes e dedicados a oferecer serviços de alta qualidade que superem as expectativas dos nossos clientes. Com uma equipe de especialistas altamente treinados...
+                    </p>
+                    <button id="expand-about" class="btn btn-primary" onclick="toggleAboutText()">Leia Mais</button>
+                    <p id="about-text-full" style="display: none;">
+                        Na CARBENZ, somos apaixonados por veículos Mercedes e dedicados a oferecer serviços de alta qualidade que superem as expectativas dos nossos clientes. Com uma equipe de especialistas altamente treinados e experientes, nossa missão é garantir que cada veículo receba um atendimento premium, desde a manutenção rotineira até os serviços mais complexos.
+
+                    Acreditamos que cada carro conta uma história, e estamos aqui para preservá-la. Utilizamos apenas as melhores práticas e tecnologias de ponta para garantir que seu veículo esteja sempre em perfeitas condições. Nossa abordagem personalizada assegura que cada cliente se sinta valorizado e bem atendido, porque entendemos que a satisfação do cliente é o coração do nosso negócio.
+
+                    Na CARBENZ, você não está apenas escolhendo um serviço; está investindo na longevidade e desempenho do seu Mercedes. Venha nos visitar e descubra como podemos transformar sua experiência automotiva em algo verdadeiramente excepcional!
+                    </p>
+                </div>
+                <br>
+                <div class="">
+                    <div class="shadow-box p-3">
+                        <h2 class="mb-4">Contatos</h2>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-phone"></i> Telefone: (11) 95198-5714</li>
+                            <li><i class="fas fa-envelope"></i> Email: contato@carberz.com</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Endereço: Rua Paquita Vilela, 809 - Guarulhos, SP</li>
+                        </ul>
+                        <!-- Mapa -->
+                        <div class="mt-4">
+                            <h3>Localização</h3>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.455209686836!2d-46.53068442427963!3d-23.46297186051678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce07e29246fdd5%3A0xf077c787b871e5e1!2sRua%20Paquita%20Vilela%2C%20809%20-%20Jardim%20Presidente%2C%20Guarulhos%20-%20SP%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1698262386446!5m2!1spt-BR!2sus" width="100%" height="100px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <button id="scrollToTopBtn">
+        &#8679;
+    </button>
+
+<!-- Footer -->
+<footer class="text-light bg-dark text-center w-100 py-4">
+    <div class="container-fluid">
+        <p>&copy; 2024 CarBenz. Todos os direitos reservados.</p>
+        
+        <div class="social-icons">
+            <a href="https://www.facebook.com/rodriguesmecanicaeestetica/" target="_blank" class="social-link">
+                <i class="fab fa-facebook footer-icon" style="color:  #3b5998"></i>
+            </a>
+            <a href="https://www.reclameaqui.com.br/empresa/car-benz/" target="_blank" class="social-link">
+                <i class="fas fa-exclamation-circle footer-icon" style="color:  #ff6f00"></i>
+            </a>
+            <a href="https://www.instagram.com/carbenz/" target="_blank" class="social-link">
+                <i class="fab fa-instagram footer-icon" style="color:  #e4405f";></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5511951985714" target="_blank" class="social-link">
+                <i class="fab fa-whatsapp footer-icon" style="color:  #25d366";></i>
+            </a>
+        </div>
+        <p>Nos siga em nossas redes sociais!</p>
+    </div>
+</footer>
+
+
+ <!-- Menssagem pg -->
+ <div id="development-message">
+    Página em desenvolvimento por Lucas Delamura
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Adiciona uma classe 'active' ao link selecionado
+            $('.nav-link').on('click', function() {
+                $('.nav-link').removeClass('active'); // Remove a classe 'active' de todos os links
+                $(this).addClass('active'); // Adiciona a classe 'active' ao link clicado
+            });
+        });
+    </script>
+
+<script>
+    function toggleAboutText() {
+        var fullText = document.getElementById('about-text-full');
+        var previewText = document.getElementById('about-text-preview');
+        var button = document.getElementById('expand-about');
+
+        if (fullText.style.display === 'none') {
+            fullText.style.display = 'block';
+            previewText.style.display = 'none';
+            button.textContent = 'Leia Menos';
+        } else {
+            fullText.style.display = 'none';
+            previewText.style.display = 'block';
+            button.textContent = 'Leia Mais';
+        }
+    }
+</script>
+
+<script>
+    // Mostrar o botão "Voltar ao Topo" ao rolar para baixo
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('#scrollToTopBtn').fadeIn();
+        } else {
+            $('#scrollToTopBtn').fadeOut();
+        }
+    });
+
+    // Função para rolar suavemente para o topo
+    $('#scrollToTopBtn').on('click', function() {
+        $('html, body').animate({scrollTop: 0}, 800);
+        return false;
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        // Copiar telefone ao clicar
+        $('li:contains("Telefone")').on('click', function() {
+            var phone = $(this).text().replace('Telefone: ', '');
+            navigator.clipboard.writeText(phone).then(function() {
+                alert('Número copiado: ' + phone);
+            }, function(err) {
+                console.error('Erro ao copiar: ', err);
+            });
+        });
+    });
+</script>
+
+</script>
+<!-- Função abrir e fechar menu mobile-->
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarNav = document.getElementById('navbarNav');
+
+        // Fecha o menu ao clicar em qualquer link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                    navbarToggler.click();
+                }
+            });
+        });
+    });
+</script>
+
+<script>
+    // Exibir formulário correto
+    const showBookingBtn = document.getElementById('show-booking');
+    const showQuoteBtn = document.getElementById('show-quote');
+    const bookingForm = document.getElementById('booking-form');
+    const quoteForm = document.getElementById('quote-form');
+
+    showBookingBtn.addEventListener('click', () => {
+        bookingForm.style.display = 'block';
+        quoteForm.style.display = 'none';
+    });
+
+    showQuoteBtn.addEventListener('click', () => {
+        quoteForm.style.display = 'block';
+        bookingForm.style.display = 'none';
+    });
+
+    // Função para enviar mensagem via WhatsApp
+    function sendWhatsAppMessage(event, type) {
+        event.preventDefault(); // Previne o envio padrão do formulário
+        
+        let message = '';
+        if (type === 'agendamento') {
+            const serviceType = document.getElementById('service-type').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            message = `Olá, gostaria de agendar um serviço:\n*Tipo de Serviço*: ${serviceType}\n*Data*: ${date}\n*Hora*: ${time}`;
+        } else if (type === 'orcamento') {
+            const name = document.getElementById('name').value;
+            const quoteDate = document.getElementById('quote-date').value; // Obtém a data do campo oculto
+            const vehicleModel = document.getElementById('vehicle-model').value;
+            const quoteServiceType = document.getElementById('quote-service-type').value;
+            const details = document.getElementById('details').value; // Obtém os detalhes
+
+            // Formata a data para visualização
+            const formattedDate = new Date(quoteDate).toLocaleString('pt-BR', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            message = `Olá tudo bem?\n\nVim pelo site, sou ${name} e gostaria de solicitar um orçamento de ${quoteServiceType} para meu ${vehicleModel}. 😊 Muito obrigado(a).\n\n*Detalhes Importantes:* ${details}\n\n*Orçamento requerido:* ${formattedDate}`;
+        }
+
+
+        const phoneNumber = '5511951985714'; // Substitua pelo número do WhatsApp desejado
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+
+        window.open(whatsappUrl, '_blank'); // Abre o WhatsApp com a mensagem
+    }
+</script>
+
+<script>
+// Função para revelar os elementos ao rolar a página
+function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal'); // Seleciona todos os elementos com a classe .reveal
+    
+    reveals.forEach(container => {
+        const windowHeight = window.innerHeight;
+        const containerTop = container.getBoundingClientRect().top;
+        const revealPoint = 150; // Ponto onde o elemento deve começar a aparecer
+
+        if (containerTop < windowHeight - revealPoint) {
+            container.classList.add('active'); // Adiciona a classe 'active' quando o container entra na viewport
+        } else {
+            container.classList.remove('active'); // Remove a classe 'active' se o container sair da viewport
+        }
+    });
+}
+
+// Função para rolar para o topo
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Rolagem suave ao topo
+    });
+}
+
+// Mostrar ou ocultar o botão de rolagem para o topo
+function toggleScrollToTopButton() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    if (window.scrollY > 300) { // Exibe o botão se o scroll for maior que 300px
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+}
+
+// Adiciona os listeners para o scroll
+window.addEventListener('scroll', () => {
+    revealOnScroll();
+    toggleScrollToTopButton();
+});
+
+// Listener para o botão de voltar ao topo
+document.getElementById('scrollToTopBtn').addEventListener('click', scrollToTop);
+</script>
+
+<script>
+// Função para ocultar a mensagem após 3 segundos
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.getElementById('development-message').style.display = 'none';
+    }, 3000); // 3000 milissegundos = 3 segundos
+});
+</script>
+
+<script>
+function toggleAboutText() {
+const fullText = document.getElementById("about-text-full");
+const previewText = document.getElementById("about-text-preview");
+const button = document.getElementById("expand-about");
+
+if (fullText.style.display === "none") {
+    fullText.style.display = "block"; // Mostra o texto completo
+    previewText.style.display = "none"; // Esconde o texto de prévia
+    button.innerText = "Leia Menos"; // Muda o texto do botão
+} else {
+    fullText.style.display = "none"; // Esconde o texto completo
+    previewText.style.display = "block"; // Mostra o texto de prévia
+    button.innerText = "Leia Mais"; // Muda o texto do botão
+}
+}
+
+</script>
+</body>
+</html>

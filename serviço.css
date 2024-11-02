@@ -1,0 +1,827 @@
+/* Container da seção de serviços */
+.services-section {
+    padding: 60px 20px; /* Padding para manter espaço nas laterais em telas menores */
+    background-color: #f8f9fa; /* Cor de fundo suave */
+}
+
+/* Títulos da seção */
+.services-section h2 {
+    font-size: 2.5rem; /* Tamanho da fonte do título */
+    color: #42729c; /* Cor do título */
+    margin-bottom: 40px; /* Margem inferior */
+    text-align: center; /* Centraliza o título */
+    font-weight: bold; /* Destaca o título */
+}
+
+/* Estilo dos cartões de serviço */
+/* Seção de serviços */
+.services-section {
+    padding: 80px 20px; /* Maior espaçamento para um visual mais arejado */
+    background-color: #f1f5f9; /* Cor de fundo leve */
+}
+
+/* Título da seção */
+.services-section h2 {
+    font-size: 3rem; /* Tamanho maior para maior impacto */
+    color: #34495e; /* Cor mais escura para contraste */
+    margin-bottom: 50px; /* Margem maior abaixo do título */
+    font-weight: 700; /* Destaque para o título */
+}
+
+/* Estilo dos cartões de serviço */
+.service-card {
+    background: #ffffff; /* Cor de fundo */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Efeito de hover nos cartões */
+.service-card:hover {
+    transform: translateY(-10px); /* Efeito de elevação */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+/* Imagens nos cartões */
+.service-card img {
+    width: 100%; /* Imagem responsiva */
+    height: 220px; /* Altura padrão */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Arredondamento das bordas da imagem */
+    margin-bottom: 15px; /* Espaço entre a imagem e o conteúdo */
+}
+
+/* Títulos dos serviços */
+.service-card h4 {
+    font-size: 1.8rem; /* Tamanho do título */
+    color: #34495e; /* Cor do título */
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+/* Ícones nos títulos */
+.service-card h4 i {
+    margin-right: 10px; /* Espaço entre o ícone e o texto */
+    color: #2980b9; /* Cor do ícone */
+}
+
+/* Texto descritivo dos serviços */
+.service-card p {
+    color: #606060; /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    margin-bottom: 15px; /* Margem inferior */
+}
+
+/* Botões */
+.service-card .btn {
+    background-color: #2980b9; /* Cor de fundo */
+    border: none; /* Remove a borda padrão */
+    color: #ffffff; /* Cor do texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    transition: background-color 0.3s; /* Transição de cor */
+}
+
+.service-card .btn:hover {
+    background-color: #1a5276; /* Cor ao passar o mouse */
+}
+
+/* Estilos para o header */
+header {
+    background-color: #343a40; /* Cor de fundo escura */
+    padding: 15px 0; /* Padding superior e inferior */
+}
+
+/* Estilos para a logo e nome da marca */
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Alinha logo e texto verticalmente */
+}
+
+.navbar-brand img {
+    height: 80px; /* Ajuste a altura da logo */
+    margin-right: 10px; /* Espaço entre logo e texto */
+}
+
+.navbar-brand h1 {
+    font-size: 1.8rem; /* Tamanho do texto */
+    color: #ffffff; /* Cor do texto */
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Estilos para a navbar */
+.navbar {
+    font-size: 1rem; /* Tamanho da fonte dos links */
+}
+
+.nav-link {
+    color: #ffffff; /* Cor dos links */
+    margin: 0 15px; /* Margem entre os links */
+    transition: color 0.3s; /* Transição suave para mudança de cor */
+}
+
+/* Estilo de hover para os links */
+.nav-link:hover {
+    color: #cfcfcf; /* Cor dos links ao passar o mouse */
+}
+
+/* Estilos para o botão do navbar-toggler */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1); /* Cor da borda do botão */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Ícone do botão */
+}
+
+/* Estilos para links na versão colapsada da navbar */
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-top: 10px; /* Margem no topo para os links em mobile */
+    }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .service-card {
+        padding: 20px; /* Ajusta o padding para telas menores */
+    }
+
+    .services-section h2 {
+        font-size: 2rem; /* Reduz o tamanho do título em telas menores */
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #fff;
+}
+
+header {
+    font-size: 14px;
+}
+
+.navbar-brand {
+    font-size: 45px;
+}
+
+
+
+.services-section {
+    background-color: #f8f9fa; /* Cor de fundo da seção */
+    padding: 0.5rem 0; /* Espaçamento superior e inferior */
+}
+
+.custom-container {
+    max-width: 1200px; /* Largura máxima do contêiner */
+    margin: auto; /* Centraliza o contêiner */
+    padding: 0 15px; /* Padding lateral */
+}
+
+h2 {
+    margin-bottom: 2rem; /* Espaço abaixo do título */
+    color: #42729c; /* Cor do título */
+    text-align: center; /* Centraliza o título */
+}
+
+.row {
+    display: flex; /* Flexbox para organizar os cartões */
+    flex-wrap: wrap; /* Permite que os cartões se movam para a próxima linha */
+    margin: 0 -15px; /* Espaçamento negativo para alinhamento com o padding das colunas */
+}
+
+.col-md-4 {
+    flex: 0 0 33.33%; /* Cada coluna ocupa 1/3 da largura em telas médias e maiores */
+    padding: 15px; /* Padding nas colunas */
+}
+
+.service-card {
+    background-color: #fff; /* Cor de fundo dos cartões */
+    border-radius: 18px; /* Arredondamento dos cantos */
+    padding: 0.55rem; /* Espaçamento interno do cartão */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    transition: transform 0.3s; /* Efeito de transformação suave */
+    text-align: center; /* Centraliza o conteúdo do cartão */
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.service-card img {
+    max-width: 100%; /* Imagem responsiva */
+    height: auto; /* Mantém proporções da imagem */
+}
+
+.service-card h4 {
+    margin: 1rem 0; /* Margem superior e inferior */
+    color: #42729c; /* Cor dos títulos de serviço */
+}
+
+.service-card p {
+    color: #343a40; /* Cor do texto da descrição */
+}
+
+/* Estilos para o fade-in */
+.reveal {
+    opacity: 0; /* Inicia invisível */
+    transform: translateY(50px); /* Inicia ligeiramente abaixo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Animação suave */
+}
+
+.reveal.active {
+    opacity: 1; /* Torna visível */
+    transform: translateY(0); /* Move para a posição original */
+}
+
+
+/* Formulários Gerais */
+#booking-form, #registration-form, #quote-form {
+    padding: 2rem;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+#booking {
+    margin-top: 10px;
+}
+
+/* Centraliza ícones e labels acima dos inputs */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-group i {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: gray;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    text-align: left;
+    display: block;
+}
+
+.form-control, .form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #6c757d;
+    box-shadow: none;
+}
+
+/* Botões */
+.btn-secondary {
+    background: linear-gradient(45deg, #6c757d, #495057);
+    border: none;
+    color: #fff;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    
+}
+
+    .btn-custom {
+        background: linear-gradient(45deg, #6c757d, #495057);
+        color: #ffffff; /* Cor do texto */
+        border: none; /* Remove a borda padrão */
+        padding: 10px 20px; /* Ajusta o preenchimento */
+        font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+        transition: background-color 0.3s ease; /* Efeito de transição */
+    }
+
+    .btn-custom:hover {
+        background-color: #c70039; /* Cor de fundo ao passar o mouse */
+        text-decoration: none; /* Remove sublinhado */
+    }
+
+.btn-secondary:hover {
+    background: linear-gradient(45deg, #495057, #6c757d);
+}
+
+
+/* Layout Flex para Agendamento e Cadastro */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    padding: 1rem;
+}
+
+/* Títulos de Seções */
+h2 {
+    margin-bottom: 2rem;
+    color: #42729c;
+    text-align: center;
+}
+
+.service-card {
+    background-color: #e9ecef;
+    border-radius: 18px;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+/* Global Styles */
+body, html {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+/* Estilo do cartão "Quem Somos" */
+#about-contact .quem-somos {
+    padding: 25px; /* Espaçamento interno */
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    position: relative; /* Para posicionar elementos adicionais */
+    overflow: hidden; /* Para garantir que o conteúdo não ultrapasse as bordas */
+}
+
+/* Efeito de hover */
+#about-contact .quem-somos:hover {
+    transform: translateY(-10px); /* Eleva o cartão ao passar o mouse */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Sombra mais intensa */
+}
+
+/* Título da seção "Quem Somos" */
+#about-contact h2 {
+    font-size: 2.2rem; /* Tamanho do título */
+    color: #2c3e50; /* Cor do título */
+    font-weight: 700; /* Peso da fonte */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Texto do cartão "Quem Somos" */
+#about-contact p {
+    font-size: 1rem; /* Tamanho do texto */
+    line-height: 1.8; /* Espaçamento entre linhas */
+    color: #444; /* Cor do texto */
+    text-align: justify; /* Justifica o texto */
+    margin-top: 10px; /* Margem superior */
+}
+
+/* Linha decorativa no topo do cartão */
+#about-contact .quem-somos::before {
+    content: '';
+    display: block;
+    width: 80px; /* Comprimento da linha */
+    height: 4px; /* Altura da linha */
+    background-color: #2980b9; /* Cor da linha */
+    margin: 0 auto 15px; /* Centraliza a linha e adiciona margem inferior */
+}
+
+/* Botão "Leia Mais/Menos" */
+#about-contact .quem-somos button {
+    background-color: #2980b9; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    border: none; /* Remove a borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 1rem; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Indica que é clicável */
+    transition: background-color 0.3s; /* Transição suave */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+#about-contact .quem-somos button:hover {
+    background-color: #1a5276; /* Cor ao passar o mouse */
+}
+
+/* Imagens ou ícones adicionais (se houver) */
+#about-contact .quem-somos img, #about-contact .quem-somos i {
+    margin-bottom: 15px; /* Espaçamento inferior */
+    display: block; /* Garante que estejam em bloco */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+}
+
+
+/* Contatos Section */
+#about-contact .contatos {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about-contact .contatos:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+#about-contact ul.list-unstyled {
+    list-style: none;
+    padding: 0;
+}
+
+#about-contact ul.list-unstyled li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#about-contact ul.list-unstyled i {
+    margin-right: 10px;
+    color: #42729c;
+    font-size: 1.2rem;
+}
+
+/* Mapa */
+.map-heading {
+    font-size: 1.5rem;
+    color: #42729c;
+    margin-bottom: 10px;
+}
+
+#about-contact iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Estilo para os contêineres revelados */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px); /* Inicia os elementos ligeiramente abaixo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Animação suave */
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0); /* Move os elementos para sua posição original */
+}
+
+/* Centralização do modal e estilo básico */
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: 100vh; /* Garante que o modal sempre fique no meio */
+}
+
+.modal-content {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f9fa; /* cor clara para contraste */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos inputs */
+.modal-body .form-label {
+    font-weight: bold;
+    color: #555;
+}
+
+.modal-body input,
+.modal-body textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border 0.2s ease;
+}
+
+.modal-body input:focus,
+.modal-body textarea:focus {
+    border-color: #42729c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(66, 114, 156, 0.2);
+}
+
+/* Estilo do botão de envio */
+.btn-primary {
+    background-color: #42729c;
+    border-color: #42729c;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #365a7e;
+    border-color: #365a7e;
+}
+
+/* Botão para rolar para o topo */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 5px;
+    background-color: #42729c; /* Cor do botão */
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 50%;
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #365a82; /* Cor mais escura ao passar o mouse */
+}
+
+
+
+#development-message {
+    position: fixed; /* Fixa a mensagem na tela */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+    color: white; /* Cor do texto */
+    display: flex; /* Usar flexbox para centralizar o texto */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    z-index: 9999; /* Coloca a mensagem acima de outros elementos */
+}
+
+.star {
+    font-size: 35px;
+    color: gold;
+}
+
+.list-unstyled {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.list-unstyled li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Espaçamento entre os itens */
+    padding: 12px 16px; /* Espaçamento interno */
+    font-size: 1rem;
+    color: #333; /* Cor do texto */
+    background-color: #f0f8ff; /* Fundo suave para os itens */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave para hover */
+}
+
+.list-unstyled li i {
+    color: #007bff; /* Cor dos ícones */
+    font-size: 1.2rem;
+    margin-right: 10px; /* Espaçamento entre ícone e texto */
+}
+
+.list-unstyled li:hover {
+    background-color: #e0efff; /* Fundo mais claro ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumenta a sombra no hover */
+    color: #0056b3; /* Cor do texto ao passar o mouse */
+}
+
+.list-unstyled li i:hover {
+    color: #004080; /* Cor do ícone ao passar o mouse */
+}
+
+
+.navbar-brand img {
+    height: 50px; /* Ajuste conforme o tamanho da logo */
+    width: auto;
+    margin-right: 8px; /* Espaçamento entre logo e o nome */
+    vertical-align: middle;
+}
+
+
+#testimonials p {
+     padding: 15px;
+}
+
+.social-icons {
+
+    padding-bottom: 16px;
+
+}
+
+/* Estilização do Footer */
+footer {
+    background-color: #343a40; /* Cor escura para fundo */
+    color: #ffffff; /* Texto branco */
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: #ffffffb3; /* Texto com leve transparência */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os ícones */
+    margin-top: 10px;
+}
+
+.footer-icon {
+    font-size: 30px; /* Tamanho dos ícones */
+    color: #ffffff; /* Cor inicial */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-link:hover .footer-icon {
+    color: #007bff; /* Cor ao passar o mouse */
+    transform: scale(1.2); /* Efeito de zoom no hover */
+}
+
+/* Personalização para cada ícone */
+.social-link.facebook:hover .footer-icon {
+    color: #3b5998;
+}
+
+.social-link.instagram:hover .footer-icon {
+    color: #e4405f;
+}
+
+.social-link.whatsapp:hover .footer-icon {
+    color: #25d366;
+}
+
+.social-link.reclameaqui:hover .footer-icon {
+    color: #ff6f00;
+}
+
+/* Estilos para o fade-in */
+.fade-in-button {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in-button.show {
+    opacity: 1;
+}
+
+/* Posição dos botões no canto direito */
+.fixed-button {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.fade-in-button {
+    background: linear-gradient(45deg, #6c757d, #495057);
+        color: #ffffff; /* Cor do texto */
+        border: none; /* Remove a borda padrão */
+        padding: 10px 20px; /* Ajusta o preenchimento */
+        font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+        transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+.fade-in-button:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+
+.button-container {
+    display: flex; /* Aplica o Flexbox */
+    justify-content: space-between; /* Coloca os botões em lados opostos */
+    align-items: center; /* Alinha verticalmente ao centro */
+    margin-top: 1rem; /* Espaçamento acima dos botões, se necessário */
+}
+
+.btn {
+    flex: 1; /* Faz com que cada botão ocupe uma quantidade igual de espaço */
+    margin: 0 0.5rem; /* Espaçamento horizontal entre os botões */
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .navbar-brand {
+        font-size: 30px;
+    }
+
+    header {
+        font-size: 18px;
+    }
+
+    .shadow-box {
+        background-color: #fff;
+        border-radius: 0px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .shadow-box:hover {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-6 {
+        flex: 1;
+        padding: 0.5rem;
+    }
+    .p-5 {
+        padding: 0 !important;
+        
+    }
+    .row {
+        --bs-gutter-x: 0;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    #about-contact h2 {
+        font-size: 1.5rem;
+    }
+
+    #about-contact p, #about-contact ul.list-unstyled li {
+        font-size: 1rem;
+    }
+
+    #about-contact iframe {
+        height: 250px;
+    }
+}
+
+.service-card img {
+    max-width: 100%; /* Mantém a imagem responsiva */
+    height: auto; /* Mantém a proporção */
+}
+
+@media (max-width: 768px) {
+    .services-section h2 {
+        font-size: 2.5rem; /* Reduz o tamanho do título em telas menores */
+    }
+
+    .service-card {
+        padding: 15px; /* Ajusta o espaçamento para telas menores */
+        margin-bottom: 20px; /* Espaço entre os cartões */
+    }
+
+    .service-card img {
+        height: 180px; /* Ajusta a altura da imagem */
+    }
+}

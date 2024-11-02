@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background-image: url('https://www.infomoney.com.br/wp-content/uploads/2019/06/mercedes-gle.jpg?w=900&quality=70&strip=all');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 500px;
+            margin: 20px;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn-custom {
+            background-color: #6c757d;
+            border: none;
+            border-radius: 20px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .btn-custom:hover {
+            background-color: #5a6268;
+        }
+        .input-group-text {
+            background-color: #5a6268;
+            color: #ffffff;
+            border: none;
+            border-radius: 18px 0 0 18px;
+        }
+        .form-control {
+            border-radius: 0 18px 18px 0;
+            border: none;
+        }
+
+         /* Estilo para o círculo de loading */
+         #loading-circle {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Cadastre-se</h2>
+        <form id="registration-form" onsubmit="handleSubmit(event)">
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" id="client-name" name="client-name" class="form-control" placeholder="Digite seu nome" required>
+            </div>
+            
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                </div>
+                <input type="email" id="client-email" name="client-email" class="form-control" placeholder="Digite seu e-mail" required>
+            </div>
+            
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                </div>
+                <input type="tel" id="client-phone" name="client-phone" class="form-control" placeholder="Digite seu telefone" required>
+            </div>
+            
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                </div>
+                <input type="text" id="client-cep" name="client-cep" class="form-control" placeholder="Digite seu CEP" required onblur="fetchAddress()">
+            </div>
+            
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-home"></i></span>
+                </div>
+                <input type="text" id="client-address" name="client-address" class="form-control" placeholder="Endereço será preenchido automaticamente" readonly>
+            </div>
+            
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-hashtag"></i></span>
+                </div>
+                <input type="text" id="client-number" name="client-number" class="form-control" placeholder="Digite o número da residência" required>
+            </div>
+            
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-car-side"></i></span>
+                </div>
+                <select id="category" name="vehicle-category" class="form-control" required onchange="updateModels()">
+                    <option value="" disabled selected>Selecione a categoria</option>
+                    <option value="sedans">Sedã</option>
+                    <option value="suvs">SUV</option>
+                    <option value="coupes">Coupé</option>
+                    <option value="conversiveis">Conversível</option>
+                    <option value="sportivos">Esportivos</option>
+                    <option value="hibridos">Híbridos</option>
+                    <option value="vans">Van</option>
+                    <option value="especiais">Especiais</option>
+                </select>
+            </div>
+            
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-car"></i></span>
+                </div>
+                <select id="vehicle-model" name="vehicle-model" class="form-control" required>
+                    <option value="" disabled selected>Selecione o modelo do veículo</option>
+                </select>
+            </div>
+            
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                </div>
+                <input type="datetime-local" id="current-datetime" name="current-datetime" class="form-control" required readonly>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-custom btn-block">Cadastrar</button>
+            <br>
+            <button type="button" class="btn btn-secondary btn-block" style="border-radius: 20px;" onclick="goBack()">Voltar para a Tela Inicial</button>
+        </form>
+    
+         <!-- Círculo de Loading -->
+        <div id="loading-circle" class="d-none text-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden"></span>
+            </div>
+        </div>
+
+            
+        <!-- Mensagem de Sucesso -->
+        <div id="success-message" class="alert alert-success d-none text-center" role="alert">
+            Cadastro efetuado com sucesso!
+        </div>
+    </div>
+
+<script>
+    function handleSubmit(event) {
+    event.preventDefault(); // Evita o envio padrão do formulário
+    
+    // Mostrar o círculo de loading
+    document.getElementById("loading-circle").classList.remove("d-none");
+    document.getElementById("success-message").classList.add("d-none");
+    
+    // Simular o envio de dados (por exemplo, usando uma chamada AJAX ou similar)
+    setTimeout(() => {
+        // Ocultar o círculo de loading
+        document.getElementById("loading-circle").classList.add("d-none");
+        
+        // Mostrar a mensagem de sucesso
+        document.getElementById("success-message").classList.remove("d-none");
+    }, 5000); // 5 segundos
+}
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxjGx-xsECUwH6Z1ckjHEc2FDZecsJ2rFGuq4nVd_P_IdHiR27LR7qcWviVskz-q7Ac/exec';
+    const form = document.forms['registration-form'];
+
+    form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    fetch(scriptURL, {
+    method: 'POST',
+    body: new FormData(form),
+    })
+    .then(response => {
+    if (!response.ok) {
+    throw new Error('Erro ao enviar o formulário');
+    }
+    window.location.reload();
+    })
+    .catch(error => console.error('Error!', error.message));
+    });
+
+</script>
+
+
+
+<script>
+    function fetchAddress() {
+        const cep = document.getElementById('client-cep').value.replace(/\D/g, '');
+        if (cep.length === 8) {
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.erro) {
+                        document.getElementById('client-address').value = `${data.logradouro}, ${data.bairro} - ${data.localidade}/${data.uf}`;
+                    } else {
+                        alert('CEP não encontrado.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar o endereço:', error);
+                    alert('Erro ao buscar o endereço. Tente novamente.');
+                });
+        } else {
+            alert('Por favor, insira um CEP válido.');
+        }
+    }
+
+    function goBack() {
+        window.location.href = 'index.html';
+    }
+
+    // Preencher automaticamente o campo de data e hora
+    const now = new Date().toISOString().slice(0, 16);
+    document.getElementById('current-datetime').value = now;
+</script>
+
+<script>
+    const models = {
+    sedans: [
+        "Mercedes-Benz Classe A",
+        "Mercedes-Benz Classe B",
+        "Mercedes-Benz Classe C",
+        "Mercedes-Benz Classe E",
+        "Mercedes-Benz Classe S",
+        "Mercedes-Benz Classe CLA",
+        "Mercedes-Benz Classe CLS"
+    ],
+    suvs: [
+        "Mercedes-Benz GLA",
+        "Mercedes-Benz GLB",
+        "Mercedes-Benz GLC",
+        "Mercedes-Benz GLE",
+        "Mercedes-Benz GLS",
+        "Mercedes-Benz G-Class (G-Wagen)"
+    ],
+    coupes: [
+        "Mercedes-Benz Classe C Coupé",
+        "Mercedes-Benz Classe E Coupé",
+        "Mercedes-Benz Classe S Coupé",
+        "Mercedes-Benz CLA Coupé",
+        "Mercedes-Benz AMG GT"
+    ],
+    conversiveis: [
+        "Mercedes-Benz Classe C Cabriolet",
+        "Mercedes-Benz Classe E Cabriolet",
+        "Mercedes-Benz Classe S Cabriolet",
+        "Mercedes-Benz SL"
+    ],
+    sportivos: [
+        "Mercedes-Benz AMG A",
+        "Mercedes-Benz AMG C",
+        "Mercedes-Benz AMG E",
+        "Mercedes-Benz AMG S",
+        "Mercedes-Benz AMG GT"
+    ],
+    hibridos: [
+        "Mercedes-Benz EQA",
+        "Mercedes-Benz EQB",
+        "Mercedes-Benz EQC",
+        "Mercedes-Benz EQS",
+        "Mercedes-Benz EQS SUV"
+    ],
+    vans: [
+        "Mercedes-Benz Vito",
+        "Mercedes-Benz V-Class",
+        "Mercedes-Benz Sprinter"
+    ],
+    especiais: [
+        "Mercedes-Benz Maybach (versões de luxo da Classe S)",
+        "Mercedes-Benz G63 AMG 6x6",
+        "Mercedes-Benz X-Class (pick-up)"
+    ]
+};
+
+function updateModels() {
+    const categorySelect = document.getElementById('category');
+    const modelSelect = document.getElementById('vehicle-model');
+    const selectedCategory = categorySelect.value;
+
+    // Limpa opções existentes
+    modelSelect.innerHTML = '<option value="" disabled selected>Selecione um Modelo...</option>';
+
+    // Adiciona novos modelos
+    if (selectedCategory) {
+        models[selectedCategory].forEach(model => {
+            const option = document.createElement('option');
+            option.value = model.toLowerCase().replace(/ /g, '-'); // transforma em um formato de valor
+            option.textContent = model;
+            modelSelect.appendChild(option);
+        });
+    }
+}
+
+</script>
+
+</body>
+</html>

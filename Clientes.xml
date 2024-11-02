@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<clientes>
+    <cliente>
+        <nome>Nome Exemplo</nome>
+        <email>email@exemplo.com</email>
+        <telefone>(11) 99999-9999</telefone>
+        <cep>12345678</cep>
+        <endereco>Rua Exemplo, Bairro Exemplo - Cidade/UF</endereco>
+        <numero>123</numero>
+        <categoria>SUV</categoria>
+        <modelo>Mercedes GLE</modelo>
+        <dataHora>2024-10-28T12:00</dataHora>
+    </cliente>
+    <!-- Mais clientes aqui -->
+</clientes>

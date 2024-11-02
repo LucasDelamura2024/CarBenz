@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+	<body>
+		<div class="container">
+			<form method="post" action="" name="contact-form">
+				<h4>Contact Us</h4>
+				<input type="text" name="your-name" placeholder="Name">
+				<input type="text" name="your-number" placeholder="Number">
+				<input type="email" name="your-email" placeholder="Email">
+				<textarea name="message" rows="7" placeholder="Your Message"></textarea>
+				<input type="submit" value="Submit" id="submit">
+			</form>
+		</div>
+	
+		
+	<script>
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbxjGx-xsECUwH6Z1ckjHEc2FDZecsJ2rFGuq4nVd_P_IdHiR27LR7qcWviVskz-q7Ac/exec';
+const form = document.forms['contact-form'];
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  
+  fetch(scriptURL, {
+    method: 'POST',
+    body: new FormData(form),
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erro ao enviar o formulário');
+    }
+    alert("Thank you! your form is submitted successfully.");
+    window.location.reload();
+  })
+  .catch(error => console.error('Error!', error.message));
+});
+
+	</script>
+	</body>
+</html>
